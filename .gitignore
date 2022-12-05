@@ -1,3 +1,6 @@
 # Project exclude paths
 /node_modules/
 /npm/install_demo/node_modules/dayjs/
+*/node_modules/
+/npm/install_demo/node_modules
+/express/express_npx/node_modules
