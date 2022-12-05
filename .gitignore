@@ -1,2 +1,3 @@
 # Project exclude paths
 /node_modules/
+/npm/install_demo/node_modules/dayjs/

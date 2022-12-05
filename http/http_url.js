@@ -8,15 +8,13 @@ http.createServer((req, res) => {
     if (req.url === "/favicon.ico") {
         return
     }
-
-    const pathName = url.parse(req.url).pathname;
-    const urlObj = url.parse(req.url);
-    console.log(urlObj);
-    // console.log(pathName);
-    console.log(url.parse(req.url),true)
-    res.writeHead(renderStatusModule.renderStatus(pathName), {"Content-Type": "text/html;charset=utf-8"})
-    res.write(renderHtmlModule.renderPath(pathName))
-    res.end()
+    const urlNode="https://nodejs.org:8888/zh-cn/docs/guides?name=tom&age=10#tag=100"
+    const urlObj = url.parse(urlNode,true);
+    console.log(urlObj)
+    console.log(url.format(urlObj));
+    //res.writeHead(renderStatusModule.renderStatus(pathName), {"Content-Type": "text/html;charset=utf-8"})
+  //  res.write(renderHtmlModule.renderPath(pathName))
+ //   res.end()
 }).listen(8888, () => {
     console.log("server start");
 })
